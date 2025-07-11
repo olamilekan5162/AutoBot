@@ -1,7 +1,14 @@
 import { openai } from "@ai-sdk/openai";
 import { Agent } from "@mastra/core/agent";
-
+import { Memory } from "@mastra/memory";
+import { LibSQLStore } from "@mastra/libsql";
 import { autobotTrade } from "../tools/autobot_trade";
+
+const memory = new Memory({
+  storage: new LibSQLStore({
+    url: "file:../mastra.db", // Or your database URL
+  }),
+});
 
 export const autobotAgent = new Agent({
   name: "Autobot Agent",
@@ -25,4 +32,5 @@ Token Reference:
 `,
   model: openai("gpt-4o-mini"),
   tools: { autobotTrade },
+  memory: memory,
 });

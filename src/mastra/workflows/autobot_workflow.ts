@@ -27,7 +27,7 @@ const tradeStep = createStep({
 });
 
 const autobotWorkflow = createWorkflow({
-  id: "autobot-workflow",
+  id: "autobot_workflow",
   inputSchema: z.void(),
   outputSchema: z.object({
     result: z.string(),
