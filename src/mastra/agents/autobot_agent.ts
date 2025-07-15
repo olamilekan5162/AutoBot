@@ -10,6 +10,11 @@ const memory = new Memory({
   storage: new LibSQLStore({
     url: "file:../mastra.db", // Or your database URL
   }),
+  options: {
+    threads: {
+      generateTitle: true,
+    },
+  },
 });
 
 export const autobotAgent = new Agent({
