@@ -3,7 +3,7 @@ import axios from "axios";
 import { z } from "zod";
 
 export const autobotTrade = createTool({
-  id: "auto-trade",
+  id: "autobot-trade",
   description: "Execute a spot trade on the Recall Network",
   inputSchema: z.object({
     fromToken: z.string().describe("ERC-20 address"),
