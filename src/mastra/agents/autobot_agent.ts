@@ -6,7 +6,7 @@ import { LibSQLStore } from "@mastra/libsql";
 import { autobotTrade } from "../tools/autobot_trade";
 import { autobotMarket } from "../tools/autobot_market";
 
-const memory = new Memory({
+export const memory = new Memory({
   storage: new LibSQLStore({
     url: "file:../mastra.db", // Or your database URL
   }),
@@ -39,13 +39,15 @@ you can perform 2 tasks
     - amount: the quantity in human-readable format (e.g., "100" for 100 USDC)
     - reason: brief description of the trade
 
-2. Fetch current price information for any token requested by the user.  
-   • Use the autobot-market tool if the user asks about token prices, token values, or market data.  
-   • Always map the token symbol to its contract address from the token reference list above.  
+2. Fetch current price information or simple moving average (SMA) for any token requested by the user.  
+   • Use the autobot-market tool if the user asks about token prices or token SMA.  
+   • Always map the token symbol to its contract address from the token reference list below.  
    • Example: if the user says "What's the price of WETH?", call autobot-market with:
        tokenAddress = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+       or if it says "What's the simple moving average of WETH?", call autobot-market with:
+       tokenSymbol = "WETH"
  
-  Always follow these references to map tokens to addresses:
+  Always follow these references to map tokens to addresses and or symbols:
   - USDC → 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
   - WETH → 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
   - WBTC → 0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
