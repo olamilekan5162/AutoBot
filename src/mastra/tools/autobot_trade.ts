@@ -1,5 +1,6 @@
 import { createTool } from "@mastra/core/tools";
 import axios from "axios";
+import { log } from "console";
 import { z } from "zod";
 
 export const autobotTrade = createTool({
@@ -15,16 +16,25 @@ export const autobotTrade = createTool({
   execute: async ({ context }) => {
     const { fromToken, toToken, amount, reason } = context;
     const { RECALL_API_URL, RECALL_API_KEY } = process.env;
+    const body = JSON.stringify({
+      fromToken,
+      toToken,
+      amount,
+      reason,
+    });
+    const request = await fetch(`${RECALL_API_URL}/api/trade/execute`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RECALL_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body,
+    })
+      .then((response) => response.json())
+      .catch((error) => {
+        console.log(error.error);
+      });
 
-    const { data } = await axios.post(
-      `${RECALL_API_URL}/api/trade/execute`,
-      { fromToken, toToken, amount, reason },
-      {
-        headers: { Authorization: `Bearer ${RECALL_API_KEY}` },
-        timeout: 30_000,
-      }
-    );
-
-    return data;
+    return request;
   },
 });

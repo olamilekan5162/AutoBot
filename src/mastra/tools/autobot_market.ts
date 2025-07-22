@@ -10,6 +10,8 @@ async function fetchSma(tokenSymbol) {
   const smaSeries = data["Technical Analysis: SMA"];
   const [latestDate] = Object.keys(smaSeries);
   const { SMA: latestSMA } = smaSeries[latestDate];
+  console.log(latestSMA);
+
   return latestSMA;
 }
 
