@@ -15,6 +15,24 @@ async function fetchSma(tokenSymbol) {
   return latestSMA;
 }
 
+async function fetchBalances() {
+  const request = await fetch(
+    `${process.env.RECALL_API_URL}/api/agent/balances`,
+    {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${process.env.RECALL_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+    }
+  )
+    .then((response) => response.json())
+    .catch((error) => {
+      console.log(error.error);
+    });
+
+  return request;
+}
 export const autobotMarket = createTool({
   id: "autobot-market",
   description:
@@ -39,8 +57,9 @@ export const autobotMarket = createTool({
     );
 
     const sma = await fetchSma(tokenSymbol);
-    console.log({ price: price, SMA: sma });
+    const balances = await fetchBalances();
+    console.log({ price: price, SMA: sma, balance: balances });
 
-    return { price: price, SMA: sma };
+    return { price: price, SMA: sma, balances: balances };
   },
 });

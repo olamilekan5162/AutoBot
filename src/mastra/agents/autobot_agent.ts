@@ -38,13 +38,15 @@ You can perform these tasks:
 
 3. If the user simply asks for price or SMA data, use the autobot-market tool.
 
+4. If the user simply asks for their balance for a particular token, use the autobot-market tool, tell them the balance only and not together with the price and sma unless otherwise specified.
+
 Token Reference:
 - USDC → EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
 - WETH → 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
 - POL → 0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174
 - ARB → 0xaf88d065e77c8cc2239327c5edb3a432268e5831
-- ARB → 0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA
-- Op → 0x7f5c764cbc14f9669b88837ca1490cca17c31607
+- BASE → 0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA
+- OP → 0x7f5c764cbc14f9669b88837ca1490cca17c31607
 - WBTC → 0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
 - SOL → So11111111111111111111111111111111111111112
 
