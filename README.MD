@@ -80,6 +80,7 @@ visit `http://localhost:4111/agents/recallAgent/chat` to access the agent dashbo
 
 ## 📁 Project Structure
 
+```
 src/
 ├── tools/
 │ ├── autobot_market.ts # Tool for fetching price, SMA and wallet balance
@@ -89,6 +90,7 @@ src/
 ├── workflows/
 │ └── autobot_workflow.ts # Workflow for user-agent interaction
 ├── index.ts # Register you agent and workflow
+```
 
 ---
 
