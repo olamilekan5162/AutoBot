@@ -44,28 +44,68 @@ This project is **built entirely on [Mastra](https://mastra.ai)** — Mastra pow
 
 ---
 
-## 📁 Project Structure
-
----
-
-├──
-├── tools/
-│ ├── autobot_market.ts # Tool for fetching price and SMA
-│ └── autobot_trade.ts # Tool for executing trades
-├── agents/
-│ └── autobot_agent.ts # Mastra-powered agent definition
-├── workflows/
-│ └── autobot_workflow.ts # Workflow for user-agent interaction
-├── index/
-│ └── memory.ts # Persistent agent memory config
-
----
-
 ## ⚙️ Setup Instructions
 
 1. **Clone the repo**
 
 ```bash
+#Clone repository
 git clone https://github.com/olamilekan5162/autobot.git
 cd autobot
+
+# Install dependencies
+npm install
 ```
+
+2. **Environment Variables**
+
+Create a .env file in the root with the following variables:
+
+```env
+GOOGLE_GENERATIVE_AI_API_KEY=your_google_generative_ai_api_key
+RECALL_API_KEY=your_recall_api_key
+RECALL_API_URL=your_recall_api_url
+ALPHAVANTAGE_API_KEY=your_alphavantage_api_key
+```
+
+1. **Run Application**
+
+```bash
+npm run dev
+```
+
+visit `http://localhost:4111/agents/recallAgent/chat` to access the agent dashboard
+
+---
+
+## 📁 Project Structure
+
+src/
+├── tools/
+│ ├── autobot_market.ts # Tool for fetching price, SMA and wallet balance
+│ └── autobot_trade.ts # Tool for executing trades
+├── agents/
+│ └── autobot_agent.ts # Mastra-powered agent definition
+├── workflows/
+│ └── autobot_workflow.ts # Workflow for user-agent interaction
+├── index.ts # Register you agent and workflow
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/name`)
+3. Commit changes (`git commit -m 'Add feature'`)
+4. Push to branch (`git push origin feature/name`)
+5. Open Pull Request
+
+---
+
+**Built for the Autonomous Apes Hackathon hosted by [Recall](https://recall.network)**

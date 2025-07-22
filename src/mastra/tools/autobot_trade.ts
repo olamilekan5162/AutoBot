@@ -1,6 +1,4 @@
 import { createTool } from "@mastra/core/tools";
-import axios from "axios";
-import { log } from "console";
 import { z } from "zod";
 
 export const autobotTrade = createTool({
