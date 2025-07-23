@@ -1,4 +1,4 @@
-# 🦾 Autobot Agent
+# Autobot Agent
 
 An intelligent trading agent designed for the **Autonomous Apes Hackathon**, built to execute or advise on crypto trades in a simulated DeFi environment.
 

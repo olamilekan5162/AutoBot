@@ -4,7 +4,7 @@ import { z } from "zod";
 
 async function fetchSma(tokenSymbol) {
   const response = await fetch(
-    `https://www.alphavantage.co/query?function=SMA&symbol=${tokenSymbol}USD&interval=daily&time_period=10&series_type=close&apikey=${process.env.ALPHAVANTAGE_API_KEY}`
+    `https://www.alphavantage.co/query?function=SMA&symbol=${tokenSymbol}USD&interval=daily&time_period=10&series_type=close&apikey=${process.env.ALPHAVANTAGE_API_KEY || "OF8NHY235GKO4DDX"} `
   );
   const data = await response.json();
   const smaSeries = data["Technical Analysis: SMA"];
