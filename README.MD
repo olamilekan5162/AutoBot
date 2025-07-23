@@ -14,7 +14,7 @@ It evaluates real-time market data and determines whether to **execute** the tra
 
 | Tech              | Purpose                                                                                             |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
-| **Mastra** 🏆     | Agent framework for workflows, tools, and memory — used to build, run, and manage the trading logic |
+| **Mastra**        | Agent framework for workflows, tools, and memory — used to build, run, and manage the trading logic |
 | TypeScript        | Core language for all logic and tooling                                                             |
 | Alpha Vantage API | Fetching SMA (Simple Moving Average) data                                                           |
 | Recall API        | Balance, Price feeds and trade execution endpoints                                                  |
@@ -23,14 +23,14 @@ It evaluates real-time market data and determines whether to **execute** the tra
 
 ## 🏆 Sponsor Tech: **Mastra**
 
-This project is **built entirely on [Mastra](https://mastra.ai)** — Mastra powers:
+This project is **built entirely with [Mastra](https://mastra.ai) on [Recall](https://recall.network)** — Mastra powers:
 
 - 🧠 Agent memory and state management via `@mastra/memory`
 - 🔧 Tool creation via `createTool` for fetching market data and placing trades
 - 🤖 Agent logic and decision-making via `Agent`
 - ⚙️ Workflow orchestration using `createWorkflow` and `createStep`
 
-> **Every major component of this agent — from conversation flow to tool execution — is powered by Mastra.**
+> **Every major component of this agent — from conversation flow to tool execution — is powered by Mastra on Recall.**
 
 ---
 
@@ -50,7 +50,7 @@ This project is **built entirely on [Mastra](https://mastra.ai)** — Mastra pow
 
 ```bash
 #Clone repository
-git clone https://github.com/olamilekan5162/autobot.git
+git clone https://github.com/olamilekan5162/Autobot.git
 cd autobot
 
 # Install dependencies
@@ -74,7 +74,7 @@ ALPHAVANTAGE_API_KEY=your_alphavantage_api_key
 npm run dev
 ```
 
-visit `http://localhost:4111/agents/recallAgent/chat` to access the agent dashboard
+visit `http://localhost:4111/agents/autobotAgent/chat` to access the agent dashboard
 
 ---
 
