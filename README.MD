@@ -24,7 +24,7 @@ It evaluates real-time market data and determines whether to **execute** the tra
 
 ## 📹 Demo Video
 
-[AutoBot Agent video demo](https://youtu.be/uR3vW9rr-bQ?si=lyBHRSHD_yyYhCzq)
+[AutoBot Agent video demo](https://youtu.be/f1JIoVhcK4Y?si=-PN2ryXuYm06Le1o)
 
 ---
 
@@ -57,9 +57,9 @@ This project is **built entirely with [Mastra](https://mastra.ai) on [Recall](ht
 1. **Clone the repo**
 
 ```bash
-#Clone repository
+# Clone repository
 git clone https://github.com/olamilekan5162/Autobot.git
-cd autobot
+cd Autobot
 
 # Install dependencies
 npm install
