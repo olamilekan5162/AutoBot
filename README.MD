@@ -82,14 +82,15 @@ visit `http://localhost:4111/agents/autobotAgent/chat` to access the agent dashb
 
 ```
 src/
-├── tools/
-│ ├── autobot_market.ts # Tool for fetching price, SMA and wallet balance
-│ └── autobot_trade.ts # Tool for executing trades
-├── agents/
-│ └── autobot_agent.ts # Mastra-powered agent definition
-├── workflows/
-│ └── autobot_workflow.ts # Workflow for user-agent interaction
-├── index.ts # Register you agent and workflow
+└── mastra/
+    ├── agents/
+    │   └── autobot_agent.ts       # Defines the Mastra agent logic and instructions
+    ├── tools/
+    │   ├── autobot_market.ts      # Tool for fetching price, SMA, and wallet balance
+    │   └── autobot_trade.ts       # Tool for executing trades
+    ├── workflows/
+    │   └── autobot_workflow.ts    # Workflow orchestrating user-agent interaction
+    └── index.ts                   # Entry point that registers the agent and workflow
 ```
 
 ---
