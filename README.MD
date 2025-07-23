@@ -8,8 +8,6 @@ Autobot interprets natural language commands like:
 
 It evaluates real-time market data and determines whether to **execute** the trade or **advise the user to hold**, offering a rule-based, risk-aware trading experience.
 
-🚀 Live Demo: [Autobot Agent](https://coin-scribe.netlify.app)
-
 ---
 
 ## 🧠 Features

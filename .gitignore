@@ -6,3 +6,7 @@ dist
 .env 
 *.db 
 *.db-* 
+.vercel
+
+# Local Netlify folder
+.netlify
