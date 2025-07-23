@@ -8,6 +8,24 @@ Autobot interprets natural language commands like:
 
 It evaluates real-time market data and determines whether to **execute** the trade or **advise the user to hold**, offering a rule-based, risk-aware trading experience.
 
+🚀 Live Demo: [Autobot Agent](https://coin-scribe.netlify.app)
+
+---
+
+## 🧠 Features
+
+- Accepts **natural language trade instructions**
+- Uses **real-time price and SMA data**
+- Only executes trades when **conditions are favorable**
+- Modular and maintainable architecture with Mastra tools and workflows
+- Supports **hold advisory** for less optimal trade conditions
+
+---
+
+## 📹 Demo Video
+
+[AutoBot Agent video demo](https://youtu.be/uR3vW9rr-bQ?si=lyBHRSHD_yyYhCzq)
+
 ---
 
 ## 🚀 Tech Stack
@@ -31,16 +49,6 @@ This project is **built entirely with [Mastra](https://mastra.ai) on [Recall](ht
 - ⚙️ Workflow orchestration using `createWorkflow` and `createStep`
 
 > **Every major component of this agent — from conversation flow to tool execution — is powered by Mastra on Recall.**
-
----
-
-## 🧠 Features
-
-- Accepts **natural language trade instructions**
-- Uses **real-time price and SMA data**
-- Only executes trades when **conditions are favorable**
-- Modular and maintainable architecture with Mastra tools and workflows
-- Supports **hold advisory** for less optimal trade conditions
 
 ---
 
